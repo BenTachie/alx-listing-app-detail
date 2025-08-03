@@ -2,6 +2,8 @@ import { useState } from "react";
 import BookingSection from "./BookingSection";
 import ReviewSection from "./ReviewSection";
 import { PropertyProps } from "@/interfaces/index";
+import Image from "next/image";
+
 
 const TABS = ["What We Offer", "Reviews", "About Host"];
 
@@ -19,14 +21,14 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 gap-4 mb-8">
-        <img
+        <Image
           src={property.image}
           alt={property.name}
           className="col-span-2 w-full h-96 object-cover rounded-lg"
         />
         {/* Optional thumbnails */}
-        <img src={property.image} alt="" className="w-full h-48 object-cover rounded-lg" />
-        <img src={property.image} alt="" className="w-full h-48 object-cover rounded-lg" />
+        <Image src={property.image} alt="" className="w-full h-48 object-cover rounded-lg" />
+        <Image src={property.image} alt="" className="w-full h-48 object-cover rounded-lg" />
       </div>
 
       {/* Main Content Grid */}

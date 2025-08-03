@@ -1,4 +1,6 @@
 import { PropertyReview } from "@/interfaces/index";
+import Image from "next/image";
+
 
 interface ReviewSectionProps {
   reviews: PropertyReview[];
@@ -21,7 +23,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews }) => {
       {reviews.map((review, index) => (
         <div key={index} className="border-b pb-4 mb-6">
           <div className="flex items-center mb-2">
-            <img
+            <Image
               src={review.avatar}
               alt={review.name}
               className="w-12 h-12 rounded-full mr-4 object-cover"
